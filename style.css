@@ -1,8 +1,2 @@
-.hey {
-  color: aqua;
-  line-height: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  height: inherit; }
+* {
+  font-family: 'Noto Sans KR', sans-serif; }

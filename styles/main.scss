@@ -1,9 +1,6 @@
-.hey{
-  color: aqua;
-  line-height: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  height: inherit;
+@import './base/fonts';
+
+* {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }

@@ -1,0 +1,31 @@
+%tag-base {
+  // 공통 스타일 선언
+  @include inline-flexbox;
+  @include text-style(12);
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+// % => placeholder
+// 1. 인자값을 받지 못한다.
+// 2. 공통된 스타일을 가지고 있을 때, 선언을 해놓고 상속 받는 식으로 작업을 한다.
+
+.tag-red {
+  @extend %tag-base;
+  color: $white;
+  background-color: $red;
+}
+
+.tag-green {
+  @extend %tag-base;
+  color: $white;
+  background-color: $green;
+}
+
+.tag-gray {
+  @extend %tag-base;
+  color: $secondary;
+  background-color: $border;
+}

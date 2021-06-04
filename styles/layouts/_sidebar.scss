@@ -1,0 +1,51 @@
+.sidebar {
+  $sidebar-margin: 32px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 32px 20px;
+  background-color: $white;
+
+  &-header {
+    @include column-flexbox(start, start);
+    .logo {
+      margin-bottom: $sidebar-margin;
+
+      a {
+        img {
+          display: block;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &-user {
+    display: block;
+    width: 100%;
+    margin-bottom: $sidebar-margin;
+
+    a {
+      @include inline-flexbox;
+      padding-left: #{$sidebar-margin - 20px};
+
+      .avartar-24 {
+        margin-right: 8px;
+      }
+
+      .username {
+        @include text-style(14, $primary);
+      }
+    }
+  }
+
+  &-nav {
+    .drawer-menu {
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.drawer-menu {
+  &-button {
+    @include text-style(18, $primary);
+    @include inline-flexbox(between);
+    width: 100%;
+    height: 54px;
+    font-weight: 700;
+
+    &.is-active {
+      color: $blue;
+
+      i {
+        color: $primary;
+      }
+
+      .ic-chevron {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-left {
+      @include inline-flexbox(start);
+      .ic-store {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+    }
+
+    &-right {
+      @include inline-flexbox(start);
+    }
+  }
+
+  &-content {
+    .drawer-menu-list {
+      margin-bottom: 8px;
+    }
+
+    .drawer-menu-item {
+      @include text-style(14, $primary);
+      font-weight: 700;
+
+      a {
+        @include inline-flexbox(start);
+        padding: 6px 12px;
+
+        .ic-new {
+          color: $red;
+        }
+      }
+    }
+  }
+}

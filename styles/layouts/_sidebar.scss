@@ -48,4 +48,17 @@
       border-bottom: 1px solid $border;
     }
   }
+
+  &-user-menu {
+    width: 100%;
+
+    .user-menu-list {
+      margin-top: 16px;
+    }
+
+    .user-menu-item {
+      @include text-style(14, $primary);
+      padding: 6px 12px;
+    }
+  }
 }

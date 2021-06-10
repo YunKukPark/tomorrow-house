@@ -1,64 +1,59 @@
 .sidebar {
-  $sidebar-margin: 32px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 240px;
-  height: 100vh;
   padding: 32px 20px;
   background-color: $white;
 
   &-header {
-    @include column-flexbox(start, start);
+    padding: 0 12px;
+
     .logo {
-      margin-bottom: $sidebar-margin;
+      @include flexbox(start);
 
       a {
-        img {
-          display: block;
-          height: 20px;
-        }
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
       }
     }
+  }
+
+  &-user,
+  &-auth {
+    @include flexbox(start);
+    height: 88px;
   }
 
   &-user {
-    display: block;
-    width: 100%;
-    margin-bottom: $sidebar-margin;
+    a {
+      @include flexbox(start);
+      @include text-style(14, $primary);
+      width: 100%;
+      font-weight: 700;
+    }
+
+    .avartar-24 {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .username {
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
 
     a {
-      @include inline-flexbox;
-      padding-left: #{$sidebar-margin - 20px};
-
-      .avartar-24 {
-        margin-right: 8px;
-      }
-
-      .username {
-        @include text-style(14, $primary);
-      }
-    }
-  }
-
-  &-nav {
-    .drawer-menu {
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
-    }
-  }
-
-  &-user-menu {
-    width: 100%;
-
-    .user-menu-list {
-      margin-top: 16px;
-    }
-
-    .user-menu-item {
-      @include text-style(14, $primary);
-      padding: 6px 12px;
+      width: 84px;
     }
   }
 }
